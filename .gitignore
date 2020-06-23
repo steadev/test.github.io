@@ -3,4 +3,16 @@
 .sass-cache
 _site
 Gemfile.lock
+
+Thumbs.db
 .DS_Store
+
+.rbenv-version
+.rvmrc
+/node_modules
+/yarn-error.log
+yarn.lock
+
+# Ignore Yard Doc
+/doc
+.yardoc/

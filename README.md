@@ -1,150 +1,152 @@
-# texture
+# Simple Texture Jekyll Theme
 
-A configurable jekyll theme for simply beautiful blogs.
+![Gem Version](https://img.shields.io/gem/v/jekyll-theme-simple-texture.svg)
 
-**Demo**: [thelehhman.com/texture](https://thelehhman.com/texture)
+Simple Texture is a gem-based responsive simple texture styled Jekyll theme for [Jekyll][Jekyll] 3.3 or above,
+which can also be forked as a boilerplate for older versions of Jekyll.
 
-![texture theme preview](/screen1.png)
+## Demo
 
+- Starter-kit demo:
+<https://yizeng.github.io/jekyll-theme-simple-texture/>
+- My own personal blog: <https://yizeng.me/blog>
 
-## Installation on Github Pages
+![Screenshot - Home](assets/images/screenshots/homepage.png)
 
-Add this line to your site's `_config.yml`:
-```yaml
-remote_theme: thelehhman/texture
-```
+![Screenshot - Blog](assets/images/screenshots/post.png)
 
-**NOTE: If you are forking this repo, remove `base_url: /texture` in the `_config.yml` which is required to load the required website assets**
 ## Installation
 
-Add this line to your Jekyll site's `Gemfile`:
+### As a Jekyll theme gem (Jekyll >= 3.3)
 
-```ruby
-gem "texture"
-```
+If you are creating a new website or blog,
+please follow the commands below first:
 
-And add this line to your Jekyll site's `_config.yml`:
+1. Install Jekyll and [Bundler][Bundler]
 
-```yaml
-theme: texture
-```
+       gem install jekyll bundler
 
-And then execute:
+2. Create a new Jekyll app
 
-    $ bundle
+       jekyll new jekyllapp
 
-Or install it yourself as:
+3. Enter the new directory
 
-    $ gem install texture
+       cd jekyllapp
 
-## Usage
+4. Then follow the instructions below like existing Jekyll app.
 
-The "texture" key in _config.yml is used to customize the theme data.
-```yaml
-texture:
-  title: Adam Denisov
-  tagline: Developer. Designer
-  date_format: "%b %-d, %Y"
+Then for existing Jekyll apps,
 
-  social_links:
-    twitter: thelehhman
-    github:  thelehhman
-    linkedIn: in/thelehhman # format: locale/username
-```
+1. Install Bundler if haven't done so.
 
-**Styling**
+       gem install bundler
 
-Multiple header styles are supported using the "style" property under texture in `_config.yml`.
+1. Remove Jekyll auto-generated default pages `404.html`, `about.markdown` and `index.markdown` or any your custom layouts or existing theme files.
 
-```yaml
-texture:
-  style: [yellow|red|black|blue|green|purple]
-```
+1. Remove the existing `Gemfile.lock`.
 
-For example, the blue style looks like this:
+1. Download the respository [here](https://github.com/yizeng/jekyll-theme-simple-texture/archive/master.zip)
+and locate `starter-kit` folder,
+or download `starter-kit` folder directly [here](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/yizeng/jekyll-theme-simple-texture/tree/master/starter-kit).
 
-![texture theme blue](/screen2.png)
+1. Put everything in the `starter-kit` in the root directory,
+i.e. `jekyllapp` in this example.
 
+1. Run `bundle install` to install dependencies.
 
-**Texture Picker**
+1. Run Jekyll with `bundle exec jekyll serve`
 
-You can toggle the texture picker to show/experiment various textures on your site using the showPicker variable. Remember to make it `false` for production.
+1. Hack away at <http://localhost:4000>!
 
-```yaml
-texture:
-  showPicker: [false|true] # show the texture selector(development purposes)
-```
+### As a fork
 
-**Comments (Disqus)**
+1. Fork the repo [here](https://github.com/yizeng/jekyll-theme-simple-texture#fork-destination-box)
 
-Comments on posts can be enabled by specifying your disqus_shortname under texture in `_config.yml`. For example,
-```yaml
-texture:
-  disqus_shortname: games
-```
+2. Clone the repo just forked.
 
-**Google Analytics**
+       git clone git@github.com:[YOUR_USERNAME]/jekyll-theme-simple-texture.git
 
-It can be enabled by specifying your analytics id under texture in `_config.yml`
-```yaml
-texture:
-  analytics_id: '< YOUR ID >'
-```
+3. Delete `starter-kit` folder and `jekyll-theme-simple-texture.gemspec` file (they're for people installing via gem)
 
-**Excerpts**
+4. Install Bundler if haven't done so.
 
-Excerpts can be enabled by adding the following line to your `_config.yml`
-```yaml
-show_excerpts: true
-```
+       gem install bundler
 
-**Toggle Navbar**
+5. Update the `Gemfile` to look like the following:
 
-```yaml
-texture:
-  showNav: true
-```
+   ```ruby
+   source "https://rubygems.org"
 
-**Navigation**
+   gem "github-pages", group: :jekyll_plugins
+   ```
 
-After setting `showNav` to true navigation can be built by adding the following to your `_config.yml`
+6. Run `bundle install` to install dependencies.
 
-```yaml
-texture:
-  navigation:
-    - title: My Work
-      url: "/my-work"
-    - title: Resume
-      url: "/resume"
-```
+7. Run Jekyll with `bundle exec jekyll serve`
 
-**Layouts**
-
-- Home
-- Page
-- Post
+8. Hack away at <http://localhost:4000>!
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/thelehhman/texture. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at <https://github.com/yizeng/jekyll-theme-simple-texture>. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
-## Development
+## Credits
 
-To set up your environment to develop this theme, run `bundle install`.
+- [Jekyll][Jekyll]
+  + [jekyll-feed](https://github.com/jekyll/jekyll-feed)
+  + [jekyll-redirect-from](https://github.com/jekyll/jekyll-redirect-from)
+  + [jekyll-seo-tag](https://github.com/jekyll/jekyll-seo-tag)
+  + [jekyll-sitemap](https://github.com/jekyll/jekyll-sitemap)
+  + [Simple-Jekyll-Search](https://github.com/christian-fei/Simple-Jekyll-Search)
+  + [Jekyll-Bootstrap](http://jekyllbootstrap.com/)
+  + [theme-the-program](https://github.com/jekyllbootstrap/theme-the-program)
 
-Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
-
-When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
-To add a custom directory to your theme-gem, please edit the regexp in `texture.gemspec` accordingly.
-
-## Donation
-If this project help you reduce time to develop, you can give me a cup of coffee :) 
-
-[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://paypal.me/thelehhman)
+- [Sass](http://sass-lang.com/)
+  + [Normalize.css](https://necolas.github.io/normalize.css/)
+  + [Animate.css](https://daneden.github.io/animate.css/)
+  + [Simple Icons](https://simpleicons.org/)
+  + [Noise Texture Generator](http://www.noisetexturegenerator.com/)
+- JavaScript
+  + [cdnjs](https://cdnjs.com/)
+  + [jQuery](https://jquery.com/)
+  + [fullPage.js](https://alvarotrigo.com/fullPage/)
+  + [pace.js](http://github.hubspot.com/pace/docs/welcome/)
+  + [Modernizr](https://modernizr.com/)
+  + [FancyBox](http://fancybox.net/)
+  + [unveil.js](http://luis-almeida.github.io/unveil/)
+- Fonts
+  + [Font Squirrel](https://www.fontsquirrel.com/)
+  + [Bitter](https://fonts.google.com/specimen/Bitter)
+  + [Junge](https://fonts.google.com/specimen/Junge)
+  + [Ubuntu Condensed](https://fonts.google.com/specimen/Ubuntu+Condensed)
 
 ## License
 
-The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+The theme is available as open source under the terms of the
+[MIT License](https://github.com/yizeng/jekyll-theme-simple-texture/blob/master/LICENSE).
 
-## More Themes
-[plainwhite](https://github.com/thelehhman/plainwhite-jekyll)
+    MIT License
+
+    Copyright (c) 2017 Yi Zeng
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all
+    copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    SOFTWARE.
+
+[Jekyll]: http://jekyllrb.com/
+[Bundler]: https://bundler.io/
