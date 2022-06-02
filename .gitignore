@@ -1,18 +1,21 @@
-*.gem
-.bundle
-.sass-cache
+# hidden files
+.*
+!.git*
+!.editorconfig
+!.nojekyll
+!.travis.yml
+!.husky
+!.commitlintrc.json
+!.versionrc.json
+
+# bundler cache
 _site
+vendor
 Gemfile.lock
 
-Thumbs.db
-.DS_Store
+# rubygem
+*.gem
 
-.rbenv-version
-.rvmrc
-/node_modules
-/yarn-error.log
-yarn.lock
-
-# Ignore Yard Doc
-/doc
-.yardoc/
+# npm dependencies
+node_modules
+package-lock.json
